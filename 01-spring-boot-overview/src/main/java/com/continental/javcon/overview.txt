@@ -1,0 +1,70 @@
+todo Goals of Spring
+* Lightweight development with java POJOs (Plain-Old-Java-Objects)
+* Dependency injection to promote loose coupling
+* Minimize boilerplate Java code -> j2EE there's a lot of code that had to write. so the folks (orang-orang) at spring, they created a collection or helper classes to make it easier
+
+todo Core Container
+=> core container is like the heartthrob/the main]
+Beans
+Code
+SpEL
+Context
+=> so basically it manages how beans are created
+
+todo Infrastructure
+AOP => Aspect Oriented Programming, add functionality to object declarative like logging, security, transaction, instrumentation
+Aspects
+Instrumentation
+Messaging
+
+todo Data Access Layer
+JDBC => helper classes reduce your JDBC code by 50%
+ORM => allows to hook into hibernate and JPA
+transactions => OXM
+             => JMS => Java message service, for dending async messages to a Message broker, spring provides helper classes for JMS
+
+todo Web Layer
+Servlet
+WebSocket
+Web
+=> all web relates classes home of the Spring MVC framework
+
+todo Testlayer
+Unit
+Integration
+Mock
+=> Support Test-Driven-Development(TDD) Mock object and out of container testing
+
+todo POM FILE STURKTURE
+Project Meta data
+Dependencies
+Plug ins
+
+todo FIND Dependency Coordinate
+* visit the project page(spring.io, hibernate.org etc)
+* visit https://central.sonatype.com/ (easiest approach)
+
+
+todo running app from terminal
+option 1 using java -jar
+    * ./mvnw package => create project to be a jar file
+    * we can using the jar file in other folder, and then just by running the jar folder by using
+      java -jar <project-name.jar>
+
+option 2
+    * just type the command
+      ./mvnw spring-boot:run
+
+todo SPRING BOOT PROPERTIES
+* there are 1000+ properties
+the properties are roughly group into the following categories
+* CORE
+* WEB
+* SECURITY
+* DATA
+* ACTUATOR
+* INTEGRATION
+* DEVTOOLS
+* TESTING
+
+list common properties https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties
