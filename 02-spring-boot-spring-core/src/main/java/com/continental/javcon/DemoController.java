@@ -33,6 +33,12 @@ public class DemoController {
 * dari hasil pengamatan saya, injection yang dilakukan hanya sampai demoController, dimana sebetulnya dan harusnya restController dipanggil untuk di instantiate (var DemoController demoController = new DemoContorller(constructor)).. nah tetapi karena rest telah melakukan itu sendiri sehingga dibutuhkan penginjectkan
 * note BUTUH PENJELASAN DETAIL MENGENAI INJECT DEPENDENCIES
 *
-*
+* dan ternyata pernyataan saya benar,
+* sehingga dibalik layar pemanggilan akan seperti berikut ini
+
+var Coach myCoach = new CricketCoach();
+var DemoController demoController = new DemoController(myCoach);
+? new DemoController(myCoach); this is constructor injection concept that Spring handle that for us
+? and     public DemoController(Coach myCoach) { this.myCoach = myCoach;} => this is our inject dependencies
 *
 * */
