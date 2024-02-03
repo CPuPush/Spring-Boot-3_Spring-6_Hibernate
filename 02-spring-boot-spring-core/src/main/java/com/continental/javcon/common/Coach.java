@@ -4,7 +4,7 @@ public interface Coach {
 
     String getDailyWorkout();
 
-    int howMuch();
+//    int howMuch();
 }
 /*
 ! Component Scanning note
