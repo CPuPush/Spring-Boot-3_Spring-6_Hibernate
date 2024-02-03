@@ -1,6 +1,8 @@
 package com.continental.javcon.rest;
 
+import com.continental.javcon.common.BaseBallCoach;
 import com.continental.javcon.common.Coach;
+import com.continental.javcon.common.TennisCoach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,18 +14,21 @@ public class DemoController {
     // define a private field for dependency
 //    @Autowired
     private Coach myCoach;
+//    private TennisCoach tennisCoach;
 
 
 
     //! define a constructor for dependency injection
+    // we cannot create 2 constructor with autowired .. but we can create setter injection for many autowired
     @Autowired
     public DemoController(@Qualifier("baseBallCoach") Coach myCoach) {
         this.myCoach = myCoach;
     }
     //! define a setter method for setter injection
+    //we can create 2 autowired with setter injection
 //    @Autowired
-//    public void setMyCoach(Coach myCoach) {
-//        this.myCoach = myCoach;
+//    public void setMyCoach(TennisCoach tennisCoach) {
+//        this.tennisCoach = tennisCoach;
 //    }
     //! define field injection
 //    private Coach myCoach;
@@ -34,6 +39,12 @@ public class DemoController {
     public String getDailyWorkout(){
         return myCoach.getDailyWorkout();
     }
+
+//    test for 2 autowired with setter injection
+//    @GetMapping("/test")
+//    public String test(){
+//        return tennisCoach.getDailyWorkout();
+//    }
 
 //    @GetMapping("/test-workout")
 //    public String getHowMuch(){
@@ -63,5 +74,5 @@ var DemoController demoController = new DemoController(myCoach);
 * and why this is error, because there is 4 implementation from the interface, and spring confused which method to go for.
 * this is why need qualifiers
 * what if we wanna use another implementation without change the qualifier?
-*
+* use the setter injection for spesific components
 * */
