@@ -1,4 +1,4 @@
-package com.continental.javcon;
+package com.continental.javcon.common;
 
 import org.springframework.stereotype.Component;
 
