@@ -20,8 +20,14 @@ public class DemoController {
 
     //! define a constructor for dependency injection
     // we cannot create 2 constructor with autowired .. but we can create setter injection for many autowired
+//    @Autowired
+//    public DemoController(@Qualifier("baseBallCoach") Coach myCoach) {
+//        this.myCoach = myCoach;
+//    }
+
+//    using @Primary annotation in the class but the recommendation is using Qualifier because higher priority
     @Autowired
-    public DemoController(@Qualifier("baseBallCoach") Coach myCoach) {
+    public DemoController(Coach myCoach){
         this.myCoach = myCoach;
     }
     //! define a setter method for setter injection
