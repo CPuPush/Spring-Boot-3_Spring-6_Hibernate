@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     // create a constructor in your class for injections
     // define a private field for dependency
+    @Autowired
     private Coach myCoach;
 
 
@@ -19,10 +20,14 @@ public class DemoController {
 //        this.myCoach = myCoach;
 //    }
     //! define a setter method for setter injection
-    @Autowired
-    public void setMyCoach(Coach myCoach) {
-        this.myCoach = myCoach;
-    }
+//    @Autowired
+//    public void setMyCoach(Coach myCoach) {
+//        this.myCoach = myCoach;
+//    }
+    //! define field injection
+//    private Coach myCoach;
+//    no need for constructor or setter
+//    but adding the @Autowired annotation
 
     @GetMapping("/workout")
     public String getDailyWorkout(){
