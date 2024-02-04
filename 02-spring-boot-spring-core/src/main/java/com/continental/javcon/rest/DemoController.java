@@ -15,15 +15,28 @@ public class DemoController {
 //    @Autowired
     private Coach myCoach;
 //    private TennisCoach tennisCoach;
+    //bean scope needed
+    private Coach myAnotherCoach;
 
 
 
     //! define a constructor for dependency injection
     // we cannot create 2 constructor with autowired .. but we can create setter injection for many autowired
+    // bean scope singleton and prototype
     @Autowired
-    public DemoController(@Qualifier("baseBallCoach") Coach myCoach) {
+    public DemoController(
+            @Qualifier("baseBallCoach") Coach myCoach,
+            @Qualifier("baseBallCoach") Coach myAnotherCoach
+
+    ) {
 //        System.out.println("In constructor: " + getClass().getSimpleName());
         this.myCoach = myCoach;
+        this.myAnotherCoach = myAnotherCoach;
+    }
+
+    @GetMapping("/check")
+    public String check(){
+        return "Comparison beans: myCoach == anotherCoach, " + (myCoach==myAnotherCoach);
     }
 
 //    using @Primary annotation in the class but the recommendation is using Qualifier because higher priority
