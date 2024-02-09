@@ -33,4 +33,5 @@ public class JavconApplication {
 ? @Primary => resolving @Component multiple implementation. and set one component to be specific.
 ? @Qualifier => same with @Primary but higher priority than @Primary
 ? @Lazy => instantiate the class when needed. if it's not needed, they won't create
+? @Scope => until this project, scope use to create another instantiate from the same class because the bean have singleton approach
 * */
