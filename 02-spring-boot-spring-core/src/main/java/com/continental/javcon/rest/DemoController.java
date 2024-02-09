@@ -14,6 +14,7 @@ public class DemoController {
     // define a private field for dependency
 //    @Autowired
     private Coach myCoach;
+    private Coach anotherCoachs;
 //    private TennisCoach tennisCoach;
     //bean scope needed
 
@@ -22,13 +23,18 @@ public class DemoController {
     //! define a constructor for dependency injection
     // we cannot create 2 constructor with autowired .. but we can create setter injection for many autowired
     // bean scope singleton and prototype
+
+//    inject the swimCoach but the swimCoach not using the @Component, but there is alternative solution by create a configuration class
+//    inject the swimCoach by using the bean id that configured in the SportConfig,
     @Autowired
     public DemoController(
-            @Qualifier("baseBallCoach") Coach myCoach
+            @Qualifier("beanidtest") Coach myCoach,
+            @Qualifier("soccerCoach") Coach anotherCoach
 
     ) {
 //        System.out.println("In constructor: " + getClass().getSimpleName());
         this.myCoach = myCoach;
+        this.anotherCoachs = anotherCoach;
     }
 
 //    @GetMapping("/check")
@@ -55,6 +61,11 @@ public class DemoController {
     @GetMapping("/workout")
     public String getDailyWorkout(){
         return myCoach.getDailyWorkout();
+    }
+
+    @GetMapping("/test")
+    public String getDailyWorkouts(){
+        return anotherCoachs.getDailyWorkout();
     }
 
 //    test for 2 autowired with setter injection
