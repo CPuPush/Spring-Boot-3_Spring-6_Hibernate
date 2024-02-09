@@ -16,7 +16,6 @@ public class DemoController {
     private Coach myCoach;
 //    private TennisCoach tennisCoach;
     //bean scope needed
-    private Coach myAnotherCoach;
 
 
 
@@ -25,19 +24,17 @@ public class DemoController {
     // bean scope singleton and prototype
     @Autowired
     public DemoController(
-            @Qualifier("baseBallCoach") Coach myCoach,
-            @Qualifier("baseBallCoach") Coach myAnotherCoach
+            @Qualifier("baseBallCoach") Coach myCoach
 
     ) {
 //        System.out.println("In constructor: " + getClass().getSimpleName());
         this.myCoach = myCoach;
-        this.myAnotherCoach = myAnotherCoach;
     }
 
-    @GetMapping("/check")
-    public String check(){
-        return "Comparison beans: myCoach == anotherCoach, " + (myCoach==myAnotherCoach);
-    }
+//    @GetMapping("/check")
+//    public String check(){
+//        return "Comparison beans: myCoach == anotherCoach, " + (myCoach==myAnotherCoach);
+//    }
 
 //    using @Primary annotation in the class but the recommendation is using Qualifier because higher priority
 //    @Autowired

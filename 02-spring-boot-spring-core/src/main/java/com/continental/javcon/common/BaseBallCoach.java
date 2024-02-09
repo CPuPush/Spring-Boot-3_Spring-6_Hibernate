@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 //@Primary
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+//@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BaseBallCoach implements Coach{
     @Override
     public String getDailyWorkout(){

@@ -34,4 +34,6 @@ public class JavconApplication {
 ? @Qualifier => same with @Primary but higher priority than @Primary
 ? @Lazy => instantiate the class when needed. if it's not needed, they won't create
 ? @Scope => until this project, scope use to create another instantiate from the same class because the bean have singleton approach
+? @PostConstruct => starting first, usefull for DB configuration example
+? @PreConstruct => run after application want to shut down
 * */
