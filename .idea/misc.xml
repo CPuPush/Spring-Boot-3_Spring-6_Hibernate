@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/01-spring-boot-overview/pom.xml" />
         <option value="$PROJECT_DIR$/02-spring-boot-spring-core/pom.xml" />
+        <option value="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
