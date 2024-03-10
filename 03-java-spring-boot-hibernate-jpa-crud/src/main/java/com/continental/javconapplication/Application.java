@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.lang.reflect.Array;
+
 @SpringBootApplication
 public class Application {
 
@@ -19,9 +21,11 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return runner  -> {
-                createStudent(studentDAO);
+//              createStudent(studentDAO);
+                readStudent(studentDAO);
         };
     }
+
 
     private void createStudent(StudentDAO studentDAO) {
         // create  the student object
@@ -35,6 +39,23 @@ public class Application {
         // display id of the saved student
         System.out.println("Saved student. Generated id: " + student.getId());
     }
+
+    private void readStudent(StudentDAO studentDAO) {
+        // create a student object
+        System.out.println("Creating a new student object ...");
+        Student student = new Student("nic", "testdic", "test@gmail.com");
+        // save the save the student
+        System.out.println("Save the Student to the database ...");
+        studentDAO.save(student);
+
+        // display id of the saved student
+        System.out.println("Saved student. Generated id: " + student.getId());
+
+        //display student
+        Student myStudent = studentDAO.studentById(student.getId());
+        System.out.println("Found the data: " + myStudent);
+    }
+
 }
 /*
 * CommandLineRunner Executed after the Spring beans have been loaded
