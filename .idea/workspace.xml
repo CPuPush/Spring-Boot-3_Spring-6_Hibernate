@@ -5,19 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8b90969-5be7-4141-bd23-8c827ad8783a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/sql/01-create-user.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/sql/02-student-tracker.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/dao/StudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/dao/StudentDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33/storage_v2/_src_/database/student_tracker.NJUS6w/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33/storage_v2/_src_/database/student_tracker.NJUS6w/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,32 +39,36 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2cH2F45rNz4xdfcvG8aR3YtfklV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Application.executor": "Run",
-    "Spring Boot.JavconApplication (1).executor": "Run",
-    "Spring Boot.JavconApplication.executor": "Run",
-    "git-widget-placeholder": "03-spring-boot-hibernate-jpa/01-database-initialize",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/the_continental/program/JavaUdemy/Spring Boot 3 | Spring 6 | Hibernate/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/sql",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.JavconApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.JavconApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;03-spring-boot-hibernate-jpa/01-database-initialize&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/the_continental/program/JavaUdemy/Spring Boot 3 | Spring 6 | Hibernate/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/sql&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/sql" />
@@ -95,7 +108,9 @@
       <option name="presentableId" value="Default" />
       <updated>1707754077909</updated>
       <workItem from="1707754080142" duration="1174000" />
-      <workItem from="1708519655001" duration="2260000" />
+      <workItem from="1708519655001" duration="3133000" />
+      <workItem from="1708526921130" duration="4808000" />
+      <workItem from="1710073838639" duration="5650000" />
     </task>
     <servers />
   </component>
