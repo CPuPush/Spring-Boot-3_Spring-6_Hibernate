@@ -21,7 +21,7 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return runner  -> {
-//            createStudent(studentDAO);
+            createStudent(studentDAO);
 //            readStudent(studentDAO);
 //            readAllStudent(studentDAO);
 //            queryForStudentByLastName(studentDAO);
@@ -29,7 +29,7 @@ public class Application {
 //            updateAllLastStudentName(studentDAO);
 //            deleteTheStudentBaseId(studentDAO);
 //            deleteAllStudent(studentDAO);
-            deleteStudentByLastName(studentDAO);
+//            deleteStudentByLastName(studentDAO);
         };
     }
 
@@ -39,89 +39,6 @@ public class Application {
         System.out.println("Deleting student with lastname : " + name);
         for(Student student : studentLastName){
             int studentId = student.getId();
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             studentDAO.studentById(studentId);
 
         }
@@ -267,9 +184,32 @@ public class Application {
 * @Repository => Specialized annotation for repository, support component scanning, Translates JDBC exception
 * */
 
+/*
+! Add logging config to log SQL Statement for diagnostics.
+Add logging configs to display SQL statements
+display the sql debug, but we cannot see the value inside
+* logging.level.org.hibernate.SQL=debug
+allows to see the actual value that are being assigned for these statement
+* logging.level.org.hibernate.orm.jdbc.bind=trace
+* this is because debug and trace
+* spring.jpa.hibernate.ddl-auto=update => auto create
+
+* */
 
 /*
 ! My note
 * Student used to create the database characteristic
 * but StudentDAO used to comunicate directly to the database
+
+! RECOMMENDATION of CREATE DATABSE TABLES FROM JAVA CODE
+? Never use Spring.jpa.hibernate.dll-auto=create
+(create-only, drop, delete, create-drop, validate, update)
+* In general, don't recomendation auto generation for enterprice, real-time projects
+    * we can very easily drop PRODUCTION data if not careful
+
+* instead for production, you should have DBAs run SQL scripts
+    * Corporate DBAs prefer SQL scripts for governance and code review
+    * the SQL scripts can be customized and fine-tuned for complex database design
+    * the SQL scripts can be version-controlled
+    * Can also work with schema migration tools such as Liquibase and Flyway
 * */

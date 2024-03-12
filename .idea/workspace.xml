@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8b90969-5be7-4141-bd23-8c827ad8783a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33/storage_v2/_src_/database/student_tracker.NJUS6w/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33/storage_v2/_src_/database/student_tracker.NJUS6w/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/dao/StudentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/dao/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/dao/StudentDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
     "Spring Boot.Application.executor": "Run",
     "Spring Boot.JavconApplication (1).executor": "Run",
     "Spring Boot.JavconApplication.executor": "Run",
-    "git-widget-placeholder": "03-spring-boot-hibernate-jpa/04-update-entity",
+    "git-widget-placeholder": "03-spring-boot-hibernate-jpa/05-delete-entity",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/the_continental/program/JavaUdemy/Spring Boot 3 | Spring 6 | Hibernate/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/sql",
     "node.js.detected.package.eslint": "true",
@@ -105,7 +106,7 @@
       <workItem from="1708519655001" duration="3133000" />
       <workItem from="1708526921130" duration="4808000" />
       <workItem from="1710073838639" duration="11775000" />
-      <workItem from="1710243748216" duration="9725000" />
+      <workItem from="1710243748216" duration="12335000" />
     </task>
     <servers />
   </component>
