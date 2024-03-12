@@ -21,12 +21,47 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return runner  -> {
-//              createStudent(studentDAO);
-//                readStudent(studentDAO);
-//                readAllStudent(studentDAO);
-            queryForStudentByLastName(studentDAO);
-
+//            createStudent(studentDAO);
+//            readStudent(studentDAO);
+//            readAllStudent(studentDAO);
+//            queryForStudentByLastName(studentDAO);
+//            updateStudent(studentDAO);
+//            updateAllLastStudentName(studentDAO);
         };
+    }
+
+    private void updateAllLastStudentName(StudentDAO studentDAO) {
+        // retrieve student based on the id: primary key
+//        update All Student Name
+        String name = "kukost";
+        System.out.println("updating all student data " + name + " name");
+        List<Student> students = studentDAO.findByLastName(name);
+
+        System.out.println("Updated Student ");
+        for(Student student : students){
+            student.setLastName("okto");
+            studentDAO.update(student);
+            System.out.println(student);
+        }
+
+    }
+
+
+    private void updateStudent(StudentDAO studentDAO) {
+        // retrieve student based on the id: primary key
+        int studentId = 1;
+        System.out.println("Getting the student id. " + studentId);
+        Student myStudent = studentDAO.studentById(studentId);
+
+        // change first name
+        System.out.println("Updating student ...");
+        myStudent.setFirstName("erer");
+
+        // update the student
+        studentDAO.update(myStudent);
+
+        // display the updated student
+        System.out.println("Updated Student: " +myStudent);
     }
 
     private void queryForStudentByLastName(StudentDAO studentDAO) {

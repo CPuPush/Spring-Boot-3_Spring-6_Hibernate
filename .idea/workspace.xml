@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8b90969-5be7-4141-bd23-8c827ad8783a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/62414806-af42-4c94-9064-db9ac3eaea33.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/java/com/continental/javconapplication/dao/StudentDAO.java" afterDir="false" />
@@ -107,7 +105,7 @@
       <workItem from="1708519655001" duration="3133000" />
       <workItem from="1708526921130" duration="4808000" />
       <workItem from="1710073838639" duration="11775000" />
-      <workItem from="1710243748216" duration="1022000" />
+      <workItem from="1710243748216" duration="6599000" />
     </task>
     <servers />
   </component>

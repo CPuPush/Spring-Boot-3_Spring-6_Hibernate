@@ -10,6 +10,9 @@ public interface StudentDAO {
     Student studentById(Integer id);
     List<Student> findAll();
     List<Student> findByLastName(String lastName);
+
+    void update(Student theStudent);
+
 }
 /*
 * create a interface DAO
