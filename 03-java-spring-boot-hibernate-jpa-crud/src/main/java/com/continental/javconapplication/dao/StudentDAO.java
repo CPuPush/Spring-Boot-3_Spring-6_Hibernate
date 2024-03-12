@@ -2,10 +2,14 @@ package com.continental.javconapplication.dao;
 
 import com.continental.javconapplication.entity.Student;
 
+import java.util.List;
+
 public interface StudentDAO {
     //create a save method
     void save(Student theStudent);
     Student studentById(Integer id);
+    List<Student> findAll();
+    List<Student> findByLastName(String lastName);
 }
 /*
 * create a interface DAO

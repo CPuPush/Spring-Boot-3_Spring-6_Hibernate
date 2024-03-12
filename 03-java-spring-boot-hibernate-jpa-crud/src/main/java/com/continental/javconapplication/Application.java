@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.lang.reflect.Array;
+import java.util.List;
 
 @SpringBootApplication
 public class Application {
@@ -22,15 +22,26 @@ public class Application {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return runner  -> {
 //              createStudent(studentDAO);
-                readStudent(studentDAO);
+//                readStudent(studentDAO);
+//                readAllStudent(studentDAO);
+            queryForStudentByLastName(studentDAO);
+
         };
+    }
+
+    private void queryForStudentByLastName(StudentDAO studentDAO) {
+        // Get a list of student
+        List<Student> theStudent = studentDAO.findByLastName("okto");
+        for(Student student : theStudent){
+            System.out.println(student);
+        }
     }
 
 
     private void createStudent(StudentDAO studentDAO) {
         // create  the student object
         System.out.println("Creating a new student object ...");
-        Student student = new Student("fori", "okto", "test@gmail.com");
+        Student student = new Student("fori", "testt", "test@gmail.com");
 
         // save the student object
         System.out.println("Save the Student to the database ...");
@@ -54,6 +65,33 @@ public class Application {
         //display student
         Student myStudent = studentDAO.studentById(student.getId());
         System.out.println("Found the data: " + myStudent);
+    }
+
+    private void readAllStudent(StudentDAO studentDAO){
+
+        // get a list of student
+//        System.out.println(studentDAO.findAll()); => this is my way
+        List<Student> listAllStudents = studentDAO.findAll();
+//        System.out.println("Student List : \n" + listAllStudents);
+
+        /*
+        * [Student
+        * {id=1, firstName='fori', lastName='okto', email='test@gmail.com'},
+        * Student
+        * {id=2, firstName='fori', lastName='okto', email='test@gmail.com'}
+        * ]
+        * the output is combining of array (Student mark), and key and value (ex id = 1)
+        * */
+
+        // display the list
+//        for(Student listAllStudent : listAllStudents){
+//            System.out.println(listAllStudent.getFirstName());
+//            // so the list can call the all of method in the Student
+//        }
+        for(Student listAllStudent : listAllStudents){
+            System.out.println(listAllStudent);
+        }
+
     }
 
 }

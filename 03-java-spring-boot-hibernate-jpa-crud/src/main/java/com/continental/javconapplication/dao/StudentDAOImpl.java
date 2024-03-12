@@ -2,9 +2,12 @@ package com.continental.javconapplication.dao;
 
 import com.continental.javconapplication.entity.Student;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Repository
 public class StudentDAOImpl implements StudentDAO{
@@ -30,6 +33,22 @@ public class StudentDAOImpl implements StudentDAO{
         return entityManager.find(Student.class, id);
     }
 
+    @Override
+    public List<Student> findAll() {
+        // create query
+        TypedQuery<Student> theQuery = entityManager.createQuery("From Student", Student.class);
+        // return query result
+        return theQuery.getResultList();
+    }
+
+    public List<Student> findByLastName(String lastName){
+        TypedQuery<Student> theQuery = entityManager.createQuery("from Student  where lastName=:theData", Student.class);
+        //set the parameter
+        theQuery.setParameter("theData", lastName);
+        return theQuery.getResultList();
+    }
+
+
 
 }
 /*
@@ -40,4 +59,10 @@ public class StudentDAOImpl implements StudentDAO{
 
 ! find
 * find(<the real entity class>, <the id>)
+
+! TypedQuery
+* we can customize the query
+* from Student => for all data
+* from Student where lastName='okto' => retrieve only okto data names
+* from Student order by id asc/desc
 * */
