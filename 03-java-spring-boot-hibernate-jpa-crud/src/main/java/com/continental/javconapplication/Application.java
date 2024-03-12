@@ -27,7 +27,117 @@ public class Application {
 //            queryForStudentByLastName(studentDAO);
 //            updateStudent(studentDAO);
 //            updateAllLastStudentName(studentDAO);
+//            deleteTheStudentBaseId(studentDAO);
+//            deleteAllStudent(studentDAO);
+            deleteStudentByLastName(studentDAO);
         };
+    }
+
+    private void deleteStudentByLastName(StudentDAO studentDAO) {
+        String name = "okto";
+        List<Student> studentLastName = studentDAO.findByLastName(name);
+        System.out.println("Deleting student with lastname : " + name);
+        for(Student student : studentLastName){
+            int studentId = student.getId();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            studentDAO.studentById(studentId);
+
+        }
+    }
+
+    private void deleteAllStudent(StudentDAO studentDAO) {
+        System.out.println("Delete all student");
+        int deletedRow = studentDAO.deleteAll();
+        System.out.println("Deleted row count: " + deletedRow);
+    }
+
+    private void deleteTheStudentBaseId(StudentDAO studentDAO) {
+        //delete Student
+        int studentId = 2;
+        System.out.println("Deleting student id " + studentId);
+        studentDAO.delete(studentId);
     }
 
     private void updateAllLastStudentName(StudentDAO studentDAO) {
@@ -76,7 +186,7 @@ public class Application {
     private void createStudent(StudentDAO studentDAO) {
         // create  the student object
         System.out.println("Creating a new student object ...");
-        Student student = new Student("fori", "testt", "test@gmail.com");
+        Student student = new Student("fori", "okto", "test@gmail.com");
 
         // save the student object
         System.out.println("Save the Student to the database ...");
