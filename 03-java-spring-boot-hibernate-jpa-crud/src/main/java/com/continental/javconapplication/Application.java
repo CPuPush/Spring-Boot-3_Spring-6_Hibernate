@@ -23,7 +23,7 @@ public class Application {
         return runner  -> {
             createStudent(studentDAO);
 //            readStudent(studentDAO);
-//            readAllStudent(studentDAO);
+            readAllStudent(studentDAO);
 //            queryForStudentByLastName(studentDAO);
 //            updateStudent(studentDAO);
 //            updateAllLastStudentName(studentDAO);
