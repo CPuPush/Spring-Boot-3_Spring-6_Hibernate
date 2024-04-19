@@ -26,4 +26,6 @@ public class Application {
 * @Autowired => allows spring to resolve and inject collaborating beans into our bean
 * @Transaction => used when we have transaction (add, update, delete) to database, but when we implement transaction in service layer, we don't use it because it will be handled at Service Layer
 
+
+* Delete EmployeeDao and EmployeeDaoImpl and create EmployeeRepository to create basic CRUD by using Spring data jpa capabilities
 * */

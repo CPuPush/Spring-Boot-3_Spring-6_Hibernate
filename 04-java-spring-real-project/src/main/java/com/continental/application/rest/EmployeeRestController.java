@@ -1,12 +1,13 @@
 package com.continental.application.rest;
 
-import com.continental.application.dao.EmployeeDAO;
+//import com.continental.application.dao.EmployeeDAO;
 import com.continental.application.entity.Employee;
 import com.continental.application.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -25,11 +26,11 @@ public class EmployeeRestController {
 
     // expose "/employees/{employeeId}"
     @GetMapping("/employees/{employeeid}")
-    public Employee getEmployee(@PathVariable int employeeid){
-        Employee theEmployee = employeeService.findById(employeeid);
-        if(theEmployee == null){
-            throw new RuntimeException("Employee id not found - " +employeeid);
-        }
+    public Optional<Employee> getEmployee(@PathVariable int employeeid){
+        Optional<Employee> theEmployee = employeeService.findById(employeeid);
+//        if(theEmployee == null){
+//            throw new RuntimeException("Employee id not found - " + employeeid);
+//        }
         return theEmployee;
     }
 
@@ -48,6 +49,7 @@ public class EmployeeRestController {
     // expose "/employees" -  update the existing employee
     @PutMapping("/employees")
     public Employee updateEmployee(@RequestBody Employee theEmployee){
+        employeeService.findById(theEmployee.getId());
         Employee dbEmployee = employeeService.save(theEmployee);
         return dbEmployee;
     }
@@ -56,7 +58,7 @@ public class EmployeeRestController {
     @DeleteMapping("/employees/{employeeId}")
     public String deleteEmployee(@PathVariable int employeeId){
         // check theId
-        Employee theEmployee = employeeService.findById(employeeId);
+        Optional<Employee> theEmployee = employeeService.findById(employeeId);
         if(theEmployee == null){
             throw new RuntimeException("Employee id not found - " + employeeId);
         }
