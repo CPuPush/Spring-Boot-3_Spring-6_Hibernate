@@ -4,104 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8b90969-5be7-4141-bd23-8c827ad8783a" name="Changes" comment="" />
+    <list default="true" id="13a0ea76-343c-445e-8e83-e95dd35f8f67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="01-spring-boot-overview/01-spring-demo-actuator-security-actuator" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2cH2F45rNz4xdfcvG8aR3YtfklV" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2hgD9YGtCZbQVq2kgyZpxeY6zIp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Application (1).executor": "Run",
-    "Spring Boot.Application.executor": "Run",
-    "Spring Boot.JavconApplication (1).executor": "Run",
     "Spring Boot.JavconApplication.executor": "Run",
-    "git-widget-placeholder": "04-spring-boot-rest-crud-apis/01-exception-in-controller",
-    "jdk.selected.JAVA_MODULE": "17",
+    "git-widget-placeholder": "04-spring-boot-rest-crud-apis/03-crud-with-spring-data-jpa",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/the_continental/program/JavaUdemy/Spring Boot 3 | Spring 6 | Hibernate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
+    "last_opened_file_path": "/home/forioktopakpahan/Program/programming/java/Spring-Boot-3_Spring-6_Hibernate",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/03-java-spring-boot-hibernate-jpa-crud/src/main/resources/sql" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="MicronautRunConfigurationType" />
-        <option value="QuarkusRunConfigurationType" />
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="javcon (1) (continental)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="continental.javcon.Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="JavconApplication" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.continental.javconapplication.Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JavconApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="javcon (1)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.continental.javcon.JavconApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="JavconApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="javcon" />
@@ -114,41 +52,20 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-e47b9c39" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a8b90969-5be7-4141-bd23-8c827ad8783a" name="Changes" comment="" />
-      <created>1707754077909</created>
+      <changelist id="13a0ea76-343c-445e-8e83-e95dd35f8f67" name="Changes" comment="" />
+      <created>1718006675889</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707754077909</updated>
-      <workItem from="1707754080142" duration="1174000" />
-      <workItem from="1708519655001" duration="3133000" />
-      <workItem from="1708526921130" duration="4808000" />
-      <workItem from="1710073838639" duration="11775000" />
-      <workItem from="1710243748216" duration="12387000" />
-      <workItem from="1710356063797" duration="615000" />
-      <workItem from="1710569728642" duration="16000" />
-      <workItem from="1710569757620" duration="932000" />
-      <workItem from="1710572322022" duration="4341000" />
-      <workItem from="1710943820698" duration="517000" />
-      <workItem from="1710944706649" duration="79000" />
-      <workItem from="1710944890600" duration="35000" />
-      <workItem from="1710944943153" duration="16000" />
-      <workItem from="1710945035932" duration="1676000" />
-      <workItem from="1711290667201" duration="1217000" />
-      <workItem from="1711450669687" duration="630000" />
-      <workItem from="1711468519281" duration="1165000" />
-      <workItem from="1711469687959" duration="35000" />
-      <workItem from="1711469757202" duration="693000" />
-      <workItem from="1711600934444" duration="1354000" />
-      <workItem from="1712126250181" duration="18000" />
-      <workItem from="1712126276149" duration="7000" />
-      <workItem from="1712126522650" duration="33000" />
+      <updated>1718006675889</updated>
+      <workItem from="1718006676949" duration="116000" />
     </task>
     <servers />
   </component>
