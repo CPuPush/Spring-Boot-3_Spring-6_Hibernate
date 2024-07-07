@@ -16,5 +16,5 @@ public class Application {
 ! Annotation
 * @ExceptionHandler => for handle exception, this annotation run when something wrong with our code
 * @PostConstruct => run the block code when application running
-* @ControllerAdvice =>
+* @ControllerAdvice => global exception
 * */

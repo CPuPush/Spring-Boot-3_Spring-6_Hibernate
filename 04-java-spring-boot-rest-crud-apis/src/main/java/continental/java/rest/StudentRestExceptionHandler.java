@@ -5,13 +5,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-@ControllerAdvice
+@ControllerAdvice // specialize annotation used to handle global exception and to add behavior that should be shared across multiple controller
 public class StudentRestExceptionHandler {
 
     @ExceptionHandler // exception handler method
     // ResponseEntity<StudentErrorResponse> is the type of the response body
     // StudentNotFoundException exc) is exception type to handle/catch
-    // ResponseEntity is the class for response entity
+    // StudentErrorResponse is the class for response entity
     public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException exc){
         StudentErrorResponse error = new StudentErrorResponse();
         error.setStatus(HttpStatus.NOT_FOUND.value());
@@ -23,11 +23,14 @@ public class StudentRestExceptionHandler {
     }
 
     //add another exception handler  ... to catch any exception
+    //? missing link example
     @ExceptionHandler
     public ResponseEntity<StudentErrorResponse> handleException(Exception exc){
         StudentErrorResponse error = new StudentErrorResponse();
         error.setStatus(HttpStatus.BAD_REQUEST.value());
-        error.setMessage(exc.getMessage());
+        error.setMessage("Unexpected Error: " + exc);
+
+
         error.setTimeStamp(System.currentTimeMillis());
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }

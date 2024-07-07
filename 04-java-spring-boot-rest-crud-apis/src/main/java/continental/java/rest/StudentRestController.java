@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class StudentRestController {
+    //create
     private List<Student> theStudents;
 
     //define @PostConstructor to load the student data ... only one!
@@ -35,19 +36,23 @@ public class StudentRestController {
     // define endpoint for "/students" return a list of students
     @GetMapping("/students")
     public List<Student> getStudents() {
-
         return theStudents;
     }
 
     // define endpoint for /students/{studentId}
     @GetMapping("/students/{studentsId}")
     public Student getStudent(@PathVariable int studentsId){
+//        System.out.println(studentsId);
 
         // check the studentId again list size => but the server still down
-        if((studentsId >= theStudents.size()) || (studentsId < 0)){
+        if((studentsId > theStudents.size()) || (studentsId < 0)){
             throw new StudentNotFoundException("Student id not found - " + studentsId);
+
+            // ?class with @ExceptionHandler will always executed
+            // *throw mean if there is error, its like catch in try catch. we can not use throw but we have to create try catch, but in spring the best practice is use throw
+            // ?new mean replace the instantiate object, that is mean the error had created automatically but we can modify the message
         }
-        return theStudents.get(studentsId);
+        return theStudents.get(studentsId-1);
     }
     //exception code moved to StudentRestExceptionHandler to centralize all the handler
 }
@@ -87,7 +92,7 @@ todo The <> symbol in Java is known as the diamond operator and is used in conju
 ? so i will create the example for you
 ? before java 7, when using generic, we had to spesify the type on both side of the assignment
 List<String> list = new ArrayList<String>();
-? This redudancy is could be cumbersome, especially dealing with complex data types
+? This redundancy is could be cumbersome, especially dealing with complex data types
 ? with diamond operator, we can simply write
 List<String> list = new ArrayList<>();
 
