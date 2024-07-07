@@ -11,10 +11,11 @@ import java.util.List;
 @Repository
 public class EmployeeDAOJpaImpl implements EmployeeDAO{
 
-    // define field for entity manager
+    // define field for entity manager (bridge between application and the database)
     private EntityManager entityManager;
 
     //setup constructor injection
+    // entity manager automatically created by SpringBoot and we can simply inject it into our application
     @Autowired
     public EmployeeDAOJpaImpl(EntityManager entityManager){
         this.entityManager = entityManager;
