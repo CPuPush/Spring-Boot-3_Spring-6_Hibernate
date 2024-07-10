@@ -27,7 +27,7 @@ public class EmployeeRestController {
     // expose "/employees/{employeeId}"
     @GetMapping("/employees/{employeeid}")
     public Optional<Employee> getEmployee(@PathVariable int employeeid){
-        Optional<Employee> theEmployee = employeeService.findById(employeeid);
+        Optional<Employee> theEmployee = Optional.ofNullable(employeeService.findById(employeeid));
 //        if(theEmployee == null){
 //            throw new RuntimeException("Employee id not found - " + employeeid);
 //        }
@@ -58,7 +58,7 @@ public class EmployeeRestController {
     @DeleteMapping("/employees/{employeeId}")
     public String deleteEmployee(@PathVariable int employeeId){
         // check theId
-        Optional<Employee> theEmployee = employeeService.findById(employeeId);
+        Optional<Employee> theEmployee = Optional.ofNullable(employeeService.findById(employeeId));
         if(theEmployee == null){
             throw new RuntimeException("Employee id not found - " + employeeId);
         }

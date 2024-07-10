@@ -28,8 +28,12 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public Optional<Employee> findById(int theId) {
+    public Employee findById(int theId) {
         Optional<Employee> result = employeeRepository.findById(theId);
+        /*
+        * Optional => different pattern instead of(daripada) of having to check for null
+        * we can use optional to see if a given value is present
+        * */
 
         Employee theEmployee = null;
 
@@ -39,7 +43,7 @@ public class EmployeeServiceImpl implements EmployeeService{
             throw new RuntimeException("Did not find Employee with id - " + theId);
         }
 
-        return Optional.of(theEmployee);
+        return theEmployee;
     }
 
     @Transactional
