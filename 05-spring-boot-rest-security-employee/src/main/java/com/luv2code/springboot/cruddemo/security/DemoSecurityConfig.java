@@ -48,7 +48,22 @@ public class DemoSecurityConfig {
         * */
 
         //? Tell Spring Security to use JDBC authentication will our data source
-        return new JdbcUserDetailsManager(dataSource);
+
+        // refactor:  Introduce Variable
+        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
+
+        //!  define query to retrieve a user by username
+        jdbcUserDetailsManager.setUsersByUsernameQuery("select user_id, pw, active from members where user_id=?");
+        // ? Question mark "?" parameter value will be the user name from login
+        /*
+        * when there is something we don't know what happening, example by default, error caused by typo of query is not coming up in terminal. so we have to assign debug in application properties. when we hit endpoint, the debug will come up in terminal
+        * */
+
+        //! define query to retrieve the authorities/roles by username
+        jdbcUserDetailsManager.setAuthoritiesByUsernameQuery("select user_id, role from roles where user_id=?");
+
+
+        return jdbcUserDetailsManager;
     }
     
 
